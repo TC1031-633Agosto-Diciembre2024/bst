@@ -14,12 +14,17 @@ private:
     void preorderRec(Node* root);
     void posorderRec(Node* root);
     void inorderRec(Node* root);
+    int calculateHeightRec(Node* root);
+    void printByLevelRec(Node* root);
+
 public:
     BST():root(nullptr){}
     void insert(int data);
     void preorder();
     void posorder();
     void inorder();
+    int calculateHeight();
+    void printByLevel();
 
 
 };

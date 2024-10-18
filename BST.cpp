@@ -4,7 +4,7 @@
 
 #include "BST.h"
 #include <iostream>
-
+#include "Queue.h"
 using namespace std;
 Node* BST::insertRec(Node* root, int data) {
     if(root==nullptr) {
@@ -58,5 +58,47 @@ void BST::inorder(){
     inorderRec(root);
     cout<<endl;
 }
+
+int BST::calculateHeightRec(Node *root) {
+    if(root == nullptr) {
+        return -1;
+    }
+    int leftHeight= calculateHeightRec(root->getLeft());
+    int rightHeight= calculateHeightRec(root->getRight());
+
+    return max(leftHeight,rightHeight) + 1;
+}
+
+int BST::calculateHeight() {
+    return calculateHeightRec(root);
+}
+
+void BST::printByLevelRec(Node *root) {
+    if(root ==nullptr) {
+        return;
+    }
+    Queue q;
+    q.enqueue(root);
+    while(!q.isEmpty()) {
+        Node* currentNode= q.dequeue();
+        cout<<currentNode->getData()<<", ";
+        if(currentNode->getLeft()!= nullptr) {
+            q.enqueue(currentNode->getLeft());
+        }
+
+        if(currentNode->getRight()!=nullptr) {
+            q.enqueue(currentNode->getRight());
+        }
+    }
+
+}
+
+void BST::printByLevel() {
+    printByLevelRec(root);
+
+}
+
+
+
 
 //Esta historia continuara .....

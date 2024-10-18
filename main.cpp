@@ -1,7 +1,7 @@
 #include <iostream>
 
 #include "BST.h"
-
+using namespace std;
 int main() {
     BST bst;
     bst.insert(10);
@@ -14,5 +14,7 @@ int main() {
     bst.inorder();
     bst.posorder();
     bst.preorder();
+    cout<<"La altura del arbol es: "<<bst.calculateHeight()<<endl;
+    bst.printByLevel();
     return 0;
 }

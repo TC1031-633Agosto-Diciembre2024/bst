@@ -67,6 +67,18 @@ build CMakeFiles/bst.dir/BST.cpp.o: CXX_COMPILER__bst_unscanned_Debug /Users/and
   OBJECT_DIR = CMakeFiles/bst.dir
   OBJECT_FILE_DIR = CMakeFiles/bst.dir
 
+build CMakeFiles/bst.dir/QueueNode.cpp.o: CXX_COMPILER__bst_unscanned_Debug /Users/andrestorres/Documents/ITESM/Estructuras/Semana$ 7/bst/QueueNode.cpp || cmake_object_order_depends_target_bst
+  DEP_FILE = CMakeFiles/bst.dir/QueueNode.cpp.o.d
+  FLAGS = -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk -fcolor-diagnostics
+  OBJECT_DIR = CMakeFiles/bst.dir
+  OBJECT_FILE_DIR = CMakeFiles/bst.dir
+
+build CMakeFiles/bst.dir/Queue.cpp.o: CXX_COMPILER__bst_unscanned_Debug /Users/andrestorres/Documents/ITESM/Estructuras/Semana$ 7/bst/Queue.cpp || cmake_object_order_depends_target_bst
+  DEP_FILE = CMakeFiles/bst.dir/Queue.cpp.o.d
+  FLAGS = -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk -fcolor-diagnostics
+  OBJECT_DIR = CMakeFiles/bst.dir
+  OBJECT_FILE_DIR = CMakeFiles/bst.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target bst
@@ -75,7 +87,7 @@ build CMakeFiles/bst.dir/BST.cpp.o: CXX_COMPILER__bst_unscanned_Debug /Users/and
 #############################################
 # Link the executable bst
 
-build bst: CXX_EXECUTABLE_LINKER__bst_Debug CMakeFiles/bst.dir/main.cpp.o CMakeFiles/bst.dir/Node.cpp.o CMakeFiles/bst.dir/BST.cpp.o
+build bst: CXX_EXECUTABLE_LINKER__bst_Debug CMakeFiles/bst.dir/main.cpp.o CMakeFiles/bst.dir/Node.cpp.o CMakeFiles/bst.dir/BST.cpp.o CMakeFiles/bst.dir/QueueNode.cpp.o CMakeFiles/bst.dir/Queue.cpp.o
   FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk
   OBJECT_DIR = CMakeFiles/bst.dir
   POST_BUILD = :
